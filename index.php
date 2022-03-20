@@ -1,5 +1,37 @@
 <?php
-include('conexao.php')
+include('conexao.php');
+
+if (isset($_POST['email']) || isset($_POST['senha'])) {
+
+  if (strlen($_POST['email']) == 0) {
+    header('Location: /?login=erro');
+  } else if (strlen($_POST['senha']) == 0) {
+    header('Location: /?login=erro3');
+  } else {
+
+    $email = $mysqli->real_escape_string($_POST['email']);
+    $senha = $mysqli->real_escape_string($_POST['senha']);
+
+    $sql_code = "SELECT * FROM tb_usuarios WHERE email = '$email' AND senha = '$senha'";
+    $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
+
+    $quantidade = $sql_query->num_rows;
+
+    if ($quantidade == 1) {
+
+      $usuario = $sql_query->fetch_assoc();
+
+      if (!isset($_SESSION)) {
+        session_start();
+      }
+
+      $_SESSION['id'] = $usuario['id'];
+      $_SESSION['nome'] = $usuario['nome'];
+
+      header("Location: painel.php");
+    }
+  }
+}
 ?>
 
 <html>
@@ -37,13 +69,38 @@ include('conexao.php')
             Login
           </div>
           <div class="card-body">
-            <form action="valida_login.php" method="post">
+            <form action="" method="post">
               <div class="form-group">
                 <input name="email" type="email" class="form-control" placeholder="E-mail">
               </div>
               <div class="form-group">
                 <input name="senha" type="password" class="form-control" placeholder="Senha">
               </div>
+
+              <?php if (isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
+
+                <div class="text-danger">
+                  Usuário inválido
+                </div>
+
+              <?php } ?>
+
+              <?php if (isset($_GET['login']) && $_GET['login'] == 'erro3') { ?>
+
+                <div class="text-danger">
+                  Senha inválida
+                </div>
+
+              <?php } ?>
+
+              <?php if (isset($_GET['login']) && $_GET['login'] == 'erro2') { ?>
+
+                <div class="text-danger">
+                  Por favor, faça login antes de acessar as páginas protegidas
+                </div>
+
+              <?php } ?>
+
               <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
             </form>
           </div>

@@ -1,3 +1,9 @@
+<?php
+
+include('protect.php');
+
+?>
+
 <!-- Coding by CodingLab | www.codinglabweb.com -->
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +33,7 @@
 
           <div class="text logo-text">
             <span class="name">Controle</span>
-            <span class="profession">Matheus Wisch</span>
+            <span class="profession"><?php echo $_SESSION['nome']; ?></span>
           </div>
         </div>
 
@@ -76,7 +82,7 @@
           <li class="">
             <a href="#">
               <i class="bx bx-log-out icon"></i>
-              <span class="text nav-text">Sair</span>
+              <a class="text nav-text" href="logout.php">Sair</a>
             </a>
           </li>
 
