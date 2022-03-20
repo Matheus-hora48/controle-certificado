@@ -315,7 +315,7 @@ body.dark .home .text {
 .container {
   margin-left: 30px;
   display: inline-block;
-  width: 30%;
+  width: 48%;
 }
 
 .titulo {
@@ -328,6 +328,9 @@ body.dark .home .text {
   border-radius: 0 0 18px 18px;
   background-color: var(--sidebar-color);
   padding: 20px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 500px;
 }
 
 h5 {
@@ -351,9 +354,30 @@ h1 {
   color: var(--text-color);
 }
 
+.total {
+  margin-left: 30px;
+  display: inline-block;
+  width: 30%;
+}
+
+.data {
+  float: right;
+  margin-right: 30px;
+}
+
 .body i {
   font-size: 30px;
   cursor: pointer;
   float: right;
+  margin-right: 10px;
   color: var(--text-color);
+}
+
+.corpo {
+  border-radius: 0 0 18px 18px;
+  background-color: var(--sidebar-color);
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 200px;
 }
