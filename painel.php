@@ -79,8 +79,8 @@ include('protect.php');
 
       <div class="bottom-content">
         <li class="">
-          <a href="#">
-            <i class="bx bx-log-out icon"></i>
+          <a href="logout.php">
+            <i class="bx bx-log-out icon">Sair</i>
             <a class="text nav-text" href="logout.php">Sair</a>
           </a>
         </li>
