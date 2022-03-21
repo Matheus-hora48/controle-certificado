@@ -80,8 +80,8 @@ include('protect.php');
       <div class="bottom-content">
         <li class="">
           <a href="logout.php">
-            <i class="bx bx-log-out icon">Sair</i>
-            <a class="text nav-text" href="logout.php">Sair</a>
+            <i class="bx bx-log-out icon"></i>
+            <span class="text nav-text">Sair</span>
           </a>
         </li>
 
