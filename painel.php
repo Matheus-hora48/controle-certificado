@@ -104,7 +104,9 @@ include('protect.php');
 
   <section class="home">
     <div class="principal">
-      <h1>Pessoa fisica: <span>380 certicados</span></h1>
+      <h1>Pessoa fisica: <br><span><?php
+      $num = $stmt->fetch_all(); 
+      echo $num .' certificados' ?></span></h1>
     </div>
     <div class="container">
       <div class="parteum">
@@ -116,27 +118,6 @@ include('protect.php');
           while ($dado = $result->fetch_array()) { ?>
             <h6 class="mt-1"><?php echo $dado['nome_certificado'] ?><i class="bx bxs-check-circle"></i> <span class="data">5 dias</span></h6>
           <?php } ?>
-
-
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="parteum">
-        <div class="titulo">
-          <h5>Proximo dias para vencimento</h5>
-        </div>
-        <div class="body">
-
-          <?php
-          while ($dado = $result->fetch_array()) { ?>
-
-            <h6 class="mt-1"><?php echo $dado['nome_certificado'] ?></h6>
-          <?php } ?>
-
-          for()
-
-          <h6 class="mt-1">Certificado teste<i class="bx bxs-check-circle"></i> <span class="data">5 dias</span></h6>
         </div>
       </div>
     </div>
