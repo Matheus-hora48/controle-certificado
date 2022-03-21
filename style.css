@@ -15,6 +15,7 @@
   --primary-color-light: #f6f5ff;
   --toggle-color: #ddd;
   --text-color: #707070;
+  --preto: black;
 
   /* ====== Transition ====== */
   --tran-03: all 0.2s ease;
@@ -143,7 +144,7 @@ header .image-text .profession {
   transform: translateY(-50%) rotate(180deg);
   height: 25px;
   width: 25px;
-  background-color: var(--primary-color);
+  background-color: var(--preto);
   color: var(--sidebar-color);
   border-radius: 50%;
   display: flex;
@@ -155,7 +156,8 @@ header .image-text .profession {
 }
 
 body.dark .sidebar header .toggle {
-  color: var(--text-color);
+  color: var(--preto);
+  background-color: var(--text-color);
 }
 
 .sidebar.close .toggle {
@@ -313,7 +315,7 @@ body.dark .home .text {
 }
 
 .container {
-  margin-left: 150px;
+  margin-left: 80px;
   display: inline-block;
   width: 40%;
 }
@@ -328,9 +330,8 @@ body.dark .home .text {
   border-radius: 0 0 18px 18px;
   background-color: var(--sidebar-color);
   padding: 20px;
-  overflow-x: hidden;
   overflow-y: scroll;
-  height: 500px;
+  height: 400px;
 }
 
 h5 {
@@ -381,11 +382,13 @@ h1 {
   padding: 20px;
   overflow-x: hidden;
   overflow-y: hidden;
-  height: 200px;
+  height: 400px;
 }
 
 /* Barra de Rolagem */
-
+::-webkit-scrollbar {
+  display: none;
+  }
 
 /* Fundo que corre */
 ::-webkit-scrollbar-track {
@@ -402,7 +405,7 @@ h1 {
 
 /* Linha que desce */
 ::-webkit-scrollbar-thumb {
-  background: #FE4719;
+  background: var(--primary-color-light);
   border-radius: 18px;
   margin-right: 50px;
 }

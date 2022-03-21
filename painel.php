@@ -27,7 +27,7 @@ include('protect.php');
     <header>
       <div class="image-text">
         <span class="image">
-          <img src="logo.png" alt="" />
+          <img src="/assets/img/LogoPequena.png" alt="" />
         </span>
 
         <div class="text logo-text">
@@ -115,6 +115,11 @@ include('protect.php');
           <h6 class="mt-1">Certificado 3</h6>
           <h6 class="mt-1">Certificado 4</h6>
           <h6 class="mt-1">Certificado 5</h6>
+          <h6 class="mt-1">Certificado 6</h6>
+          <h6 class="mt-1">Certificado 7</h6>
+          <h6 class="mt-1">Certificado 8</h6>
+          <h6 class="mt-1">Certificado 9</h6>
+          <h6 class="mt-1">Certificado 10</h6>
         </div>
       </div>
     </div>
