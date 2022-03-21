@@ -1,6 +1,8 @@
 <?php
 
+require 'sistema.php';
 include('protect.php');
+
 
 ?>
 
@@ -110,16 +112,12 @@ include('protect.php');
           <h5>Todos certificados</h5>
         </div>
         <div class="body">
-          <h6 class="mt-1">Certificado 1</h6>
-          <h6 class="mt-1">Certificado 2</h6>
-          <h6 class="mt-1">Certificado 3</h6>
-          <h6 class="mt-1">Certificado 4</h6>
-          <h6 class="mt-1">Certificado 5</h6>
-          <h6 class="mt-1">Certificado 6</h6>
-          <h6 class="mt-1">Certificado 7</h6>
-          <h6 class="mt-1">Certificado 8</h6>
-          <h6 class="mt-1">Certificado 9</h6>
-          <h6 class="mt-1">Certificado 10</h6>
+          <?php
+          while ($dado = $result->fetch_array()) { ?>
+            <h6 class="mt-1"><?php echo $dado['nome_certificado'] ?><i class="bx bxs-check-circle"></i> <span class="data">5 dias</span></h6>
+          <?php } ?>
+
+
         </div>
       </div>
     </div>
@@ -129,22 +127,16 @@ include('protect.php');
           <h5>Proximo dias para vencimento</h5>
         </div>
         <div class="body">
-          <h6 class="mt-1">
-            Certificado 1 <i class="bx bxs-check-circle"></i> <span class="data">5 dias</span>
-          </h6>
-          <h6 class="mt-1">
-            Certificado 2 <i class="bx bxs-check-circle"></i> <span class="data">5 dias</span>
-          </h6>
-          <h6 class="mt-1">
-            Certificado 3 <i class="bx bxs-check-circle"></i> <span class="data">5 dias</span>
-          </h6>
-          <h6 class="mt-1">
-            Certificado 4 <i class="bx bxs-check-circle"></i> <span class="data">5 dias</span>
-          </h6>
-          <h6 class="mt-1">
-            Certificado 5 <i class="bx bxs-check-circle"></i> <span class="data">5 dias</span>
-          </h6>
-          
+
+          <?php
+          while ($dado = $result->fetch_array()) { ?>
+
+            <h6 class="mt-1"><?php echo $dado['nome_certificado'] ?></h6>
+          <?php } ?>
+
+          for()
+
+          <h6 class="mt-1">Certificado teste<i class="bx bxs-check-circle"></i> <span class="data">5 dias</span></h6>
         </div>
       </div>
     </div>
