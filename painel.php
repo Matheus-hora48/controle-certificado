@@ -104,9 +104,7 @@ include('protect.php');
 
   <section class="home">
     <div class="principal">
-      <h1>Pessoa fisica: <br><span><?php
-      $num = $stmt->fetch_all(); 
-      echo $num .' certificados' ?></span></h1>
+      <h1>Pessoa fisica: <br><span>380 certificados</span></h1>
     </div>
     <div class="container">
       <div class="parteum">
