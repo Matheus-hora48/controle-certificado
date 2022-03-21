@@ -1,14 +1,28 @@
 <?php
 
-$usuario = 'root';
-$senha = '';
-$database = 'certificado';
-$host = 'localhost';
+class Conexao {
 
-$mysqli = new mysqli($host, $usuario, $senha, $database);
+	private $host = 'localhost';
+	private $dbname = 'certificad';
+	private $user = 'root';
+	private $pass = '';
 
-if($mysqli->error) {
-    die("Falha ao conectar ao banco de dados: " . $mysqli->error);
+	public function conectar() {
+		try {
+
+			$conexao = new PDO(
+				"mysql:host=$this->host;dbname=$this->dbname",
+				"$this->user",
+				"$this->pass"				
+			);
+
+			return $conexao;
+
+
+		} catch (PDOException $e) {
+			echo 'Erro ao conectar com o banco de dados';
+		}
+	}
 }
 
 ?>
