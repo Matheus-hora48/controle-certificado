@@ -38,25 +38,38 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
 <head>
   <meta charset="utf-8" />
-  <title>App Help Desk</title>
+  <title>Controle certificados</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <style>
+    body{
+      background-color: white;
+    }
+
     .card-login {
       padding: 30px 0 0 0;
       width: 350px;
       margin: 0 auto;
     }
+
+    .navbar {
+      background-color: black;
+    }
+
+    .btn {
+      background-color: black;
+      color: white;
+    }
   </style>
+
 </head>
 
 <body>
 
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-dark">
     <a class="navbar-brand" href="#">
-      <img src="/assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      Controle certificados
+      <img src="/assets/img/logo.png" width="250" class="d-inline-block align-top" alt="">
     </a>
   </nav>
 
@@ -101,7 +114,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
               <?php } ?>
 
-              <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
+              <button class="btn btn-lg btn-block" type="submit">Entrar</button>
             </form>
           </div>
         </div>

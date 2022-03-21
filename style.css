@@ -410,3 +410,7 @@ h1 {
 
 
 /* Barra de Rolagem */
+
+.navbar{
+  background-color: var(--primary-color);
+}
