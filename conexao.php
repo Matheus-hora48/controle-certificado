@@ -3,7 +3,7 @@
 class Conexao {
 
 	private $host = 'localhost';
-	private $dbname = 'certificad';
+	private $dbname = 'certificado';
 	private $user = 'root';
 	private $pass = '';
 
